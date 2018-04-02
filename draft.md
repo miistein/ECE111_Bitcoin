@@ -11,28 +11,28 @@ Navigate to http://dl.altera.com/17.1/?edition=lite&platform=windows&download_ma
 Create an account and make sure you are signed in.
 Go back to the download page and under devices, uncheck all devices except for the Arria II model.
 
-![1](images\1.png)
+</p><center><img src="./images/1.png"></center>
 
 Next, disable any adblockers and click **download selected Files**.
 
-![2](images\2.png)
+</p><center><img src="./images/2.png"></center>
 
 If the settings in your browser are correct, the above window should show up. Click on where you want to download the setup files and press ok.
 
-![3](images\3.png)
+</p><center><img src="./images/3.png"></center>
 
 Navigate to your download folder and run QuartusLiteSetup-17.1.0.590-windows.exe.
 Click Next and accept all agreements.
 
-![20 ](images\20.png)
+</p><center><img src="./images/20.png"></center>
 
 You will need to choose an installation directory. To make things easier, it is recommended to use the default directory. If you choose a directory with spaces such as Program Files there will be an extra step at the end, but do not worry if an error message pops up when this option is selected.
 
-![5](images\5.png)
+</p><center><img src="./images/5.png"></center>
 
 If all setup files were downloaded correctly, we get the above screen. If there are more devices that is OK as long as Quartus Prime or Modelsim are checked. Press next and Quartus Suite will be installed. Once the download is complete, you may delete the setup files in your download folder.
 
-![6](images\6.png)
+</p><center><img src="./images/6.png"></center>
 
 Uncheck USB Blaster II driver and launch quartus.
 
@@ -42,7 +42,7 @@ In Quartus, try going into Tools-> Options -> EDA Tools options (Tools in the ri
 
 If this is the case, you will need to manually add the path to your ...\modelsim_ase\win32aloem folder. See https://www.altera.com/support/support-resources/knowledge-base/solutions/rd05172013_526.html.
 
-![7](images\7.png)
+</p><center><img src="./images/7.png"></center>
 
 The end result should look something like the above but varies slightly depending on the installation directory.
 # Creating your first project: fibonnaci_calculator
@@ -55,15 +55,16 @@ You can save the files into the folder by copy-and-pasting the text into Quartus
 
 Another way to do this is to pasting the text into your favorite text-editor (Atom/Sublime-Text/TextMate/Vim/etc). All text editors mentioned have downloadable packages that support the SystemVerilog language.
 
-![23](images\23.png)
-![21 ](images\21.png)
+</p><center><img src="./images/23.png"></center>
+</p><center><img src="./images/21.png"></center>
+
 Double check the type is SystemVerilog HDL Files with Quartus (top) or All Files (\*.\*) with a .sv extension with other text editors (bottom).
 
-![9](images\9.png)
+</p><center><img src="./images/9.png"></center>
 
 Now, run Quartus and navigate to File -> Create a New Project. You should get the screen above. Click Next on the introductory page.
 
-![11](images\11.png)
+</p><center><img src="./images/11.png"></center>
 
 You will be asked to select a working directory for the project. Select the folder where the fibonnaci_calculator.sv and tb_fibonnaci_calculator.sv are saved. Be aware that you cannot have multiple projects in the same directory. If you have a directory for this class, there should be sub-folders for each project.
 
@@ -71,15 +72,15 @@ You will be asked to select a working directory for the project. Select the fold
 
 Once this section is complete, select Next.
 
-![12](images\12.png)
+</p><center><img src="./images/12.png"></center>
 
 The next page asks if you want to use a previous template for your design. For most purposes this should be left as empty project. Click Next as this is the default.
 
-![13](images\13.png)
+</p><center><img src="./images/13.png"></center>
 
 The next screen allows you to add files to the project. For most cases it suffices to click Add All. After you have selected the files to add press Next. You may come back to this screen after you create the project from the homescreen by clicking Project-> Add/Remove Files.
 
-![30 ](images\30.png)
+</p><center><img src="./images/30.png"></center>
 
 Designing hardware relies on the capability of each FPGA. In this class, we will be using:
 
@@ -89,29 +90,29 @@ Device: **EP2AGX45DF29I5**
 
 Scroll down using the arrow pointing downwards on the bottom right. Be sure to **select EP2AGX45DF29I5** otherwise your area and timing numbers will be incorrect. Press Next.
 
-![16 ](images\16.png)
+</p><center><img src="./images/16.png"></center>
 
 Next to Simulation, under Tool Name click on **ModelSim-Altera** and under format click **SystemVerilog HDL** then press next.
 
 On the next screen it will display a summary of your settings. Press Finish
 
-![60 ](images\60.png)
+</p><center><img src="./images/60.png"></center>
 
 Now that we have created the project, under **Compilation Hierachy** double click **fibonnaci_calculator**. It will open the file containing the top module which in this case is fibonnaci_calculator.sv.
 
 ## Compiling fibonnaci_calculator.sv in Quartus
 
-![31  ](images\31.png)
+</p><center><img src="./images/31.png"></center>
 
 Now, double click on **Analysis & Synthesis** under the Tasks pane. This will compile and synthesize your program(s). If there are no errors, you will see a pop-up saying the Analysis & Compilation was successful. If not, it will tell you your errors in the Messages pane at the bottom of the screen. It is good habit to just review your warnings (if any) to ensure you have no latches or other design hazards.
 
 ## Running the Testbench and Displaying Signals Through ModelSim
 
-![32 ](images\32.png)
+</p><center><img src="./images/32.png"></center>
 
 Once the Analysis & Synthesis is successful, we can open up ModelSim to test our code. Go to Tools -> Run Simulation Tool -> RTL Simulation. Make sure that ModelSim is not already running or there will be an error.
 
-![35 ](images\35.png)
+</p><center><img src="./images/35.png"></center>
 
 Go to <b>Compile</b>--&gt;<b>Compile</b>. Ensure that the <b>Library</b> is <b>work</b> and you are in your project's directory. Many times you will have to change directories
 so that you are in your project's directory. Select all SystemVerilog HDL Files that pertain to your project. This includes the testbench. Hit <b>Compile</b> and then <b>Done</b>.
@@ -172,16 +173,13 @@ Now that our code is confirmed to be correct, it is useful go back to Quartus to
 
 ### Checking Fmax
 
-![41 ](images\41.png)
-
+</p><center><img src="./images/41.png"></center>
 Double click TimeQuest Timing Analysis under **Tasks**.  This will run Fitter (Place & Route) as well.
 
-![42  ](images\42.png)
-
+</p><center><img src="./images/42.png"></center>
 In the Table of Contents of the **Compilation Report** expand **TimeQuest Timing Analyzer**. Then expand **Slow 900mV 100C Model** and look at Fmax Summary. The speed of your clock is given by Fmax.
 
 ### Checking Area
 
-![43 ](images\43.png)
-
+</p><center><img src="./images/43.png"></center>
 In the Table of Contents of the **Compilation Report** expand **Fitter** and then Summary. Under Fitter Summary, double click **Logic utilization**. Area is the sum of Combinational ALUTS and Dedicated logic registers. In this class, Memory ALUTs must be 0.
